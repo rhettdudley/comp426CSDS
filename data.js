@@ -13,6 +13,7 @@ const stores = {
         ]
       },
       "properties": {
+        "name" : "Pantana Bob's",
         "phoneFormatted": "(919) 942-7575",
         "phone": "9199427575",
         "address": "305 W Rosemary St",
@@ -28,215 +29,189 @@ const stores = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.049766,
-          38.900772
+            -79.057902,
+            35.913697
         ]
       },
       "properties": {
-        "phoneFormatted": "(202) 507-8357",
-        "phone": "2025078357",
-        "address": "2221 I St NW",
-        "city": "Washington DC",
+        "name": "La Residencia",
+        "phoneFormatted": "(919) 967-2506",
+        "phone": "9199672506",
+        "address": "202 W Rosemary",
+        "city": "Chapel Hill",
         "country": "United States",
-        "crossStreet": "at 22nd St NW",
-        "postalCode": "20037",
-        "state": "D.C."
+        "crossStreet": "at Pritchard AVE",
+        "postalCode": "27516",
+        "state": "NC"
       }
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.043929,
-          38.910525
-        ]
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+              -79.060216,
+              35.911232
+          ]
+        },
+        "properties": {
+          "name": "The Franklin",
+          "phoneFormatted": "(919) 442-9000",
+          "phone": "9194429000",
+          "address": "311 W Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "at Kenan St",
+          "postalCode": "27516",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(202) 387-9338",
-        "phone": "2023879338",
-        "address": "1512 Connecticut Ave NW",
-        "city": "Washington DC",
-        "country": "United States",
-        "crossStreet": "at Dupont Circle",
-        "postalCode": "20036",
-        "state": "D.C."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.0672,
-          38.90516896
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.055455,
+            35.913053
+          ]
+        },
+        "properties": {
+          "name": "Top of the Hill",
+          "phoneFormatted": "(919) 929-8676",
+          "phone": "9199298676",
+          "address": "100 E Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "at N Columbia St",
+          "postalCode": "27514",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(202) 337-9338",
-        "phone": "2023379338",
-        "address": "3333 M St NW",
-        "city": "Washington DC",
-        "country": "United States",
-        "crossStreet": "at 34th St NW",
-        "postalCode": "20007",
-        "state": "D.C."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.002583742142,
-          38.887041080933
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.056808,
+            35.913278
+          ]
+        },
+        "properties": {
+          "name": "He's Not Here",
+          "phoneFormatted": "(919) 942-7939",
+          "phone": "9199427939",
+          "address": "112 1/2 W Franklin St,",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "at Rosemary St",
+          "postalCode": "27516",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(202) 547-9338",
-        "phone": "2025479338",
-        "address": "221 Pennsylvania Ave SE",
-        "city": "Washington DC",
-        "country": "United States",
-        "crossStreet": "btwn 2nd & 3rd Sts. SE",
-        "postalCode": "20003",
-        "state": "D.C."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -76.933492720127,
-          38.99225245786
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.058766,
+            35.912178
+          ]
+        },
+        "properties": {
+          "name": "Might As Well Bar & Grill",
+          "phoneFormatted": "(984) 234-3333",
+          "phone": "9842343333",
+          "address": "206 W Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "N/A",
+          "postalCode": "27516",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "address": "8204 Baltimore Ave",
-        "city": "College Park",
-        "country": "United States",
-        "postalCode": "20740",
-        "state": "MD"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.097083330154,
-          38.980979
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.059689,
+            35.911220
+          ]
+        },
+        "properties": {
+          "name": "Dead Mule Club",
+          "phoneFormatted": "(919) 969-7659",
+          "phone": "9199697659",
+          "address": "303 W Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "at Mallette St",
+          "postalCode": "27516",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(301) 654-7336",
-        "phone": "3016547336",
-        "address": "4831 Bethesda Ave",
-        "cc": "US",
-        "city": "Bethesda",
-        "country": "United States",
-        "postalCode": "20814",
-        "state": "MD"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.359425054188,
-          38.958058116661
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.062723,
+            35.910623
+          ]
+        },
+        "properties": {
+          "name": "Carolina Brewery",
+          "phoneFormatted": "(919) 942-1800",
+          "phone": "9199421800",
+          "address": "460 W Franklin St,",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "N/A",
+          "postalCode": "27516",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(571) 203-0082",
-        "phone": "5712030082",
-        "address": "11935 Democracy Dr",
-        "city": "Reston",
-        "country": "United States",
-        "crossStreet": "btw Explorer & Library",
-        "postalCode": "20190",
-        "state": "VA"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.10853099823,
-          38.880100922392
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.052720,
+            35.914479
+          ]
+        },
+        "properties": {
+          "name": "Linda's Bar & Grill",
+          "phoneFormatted": "(919) 933-6663",
+          "phone": "9199336663",
+          "address": "203 E Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "at Henderson St",
+          "postalCode": "27514",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(703) 522-2016",
-        "phone": "7035222016",
-        "address": "4075 Wilson Blvd",
-        "city": "Arlington",
-        "country": "United States",
-        "crossStreet": "at N Randolph St.",
-        "postalCode": "22203",
-        "state": "VA"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.28784,
-          40.008008
-        ]
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.054175,
+            35.913937
+          ]
+        },
+        "properties": {
+          "name": "Goodfellows",
+          "phoneFormatted": "(919) 960-8685",
+          "phone": "9199608685",
+          "address": "149 E Franklin St",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "N/A",
+          "postalCode": "27514",
+          "state": "NC"
+        }
       },
-      "properties": {
-        "phoneFormatted": "(610) 642-9400",
-        "phone": "6106429400",
-        "address": "68 Coulter Ave",
-        "city": "Ardmore",
-        "country": "United States",
-        "postalCode": "19003",
-        "state": "PA"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.20121216774,
-          39.954030175164
-        ]
-      },
-      "properties": {
-        "phoneFormatted": "(215) 386-1365",
-        "phone": "2153861365",
-        "address": "3925 Walnut St",
-        "city": "Philadelphia",
-        "country": "United States",
-        "postalCode": "19104",
-        "state": "PA"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.043959498405,
-          38.903883387232
-        ]
-      },
-      "properties": {
-        "phoneFormatted": "(202) 331-3355",
-        "phone": "2023313355",
-        "address": "1901 L St. NW",
-        "city": "Washington DC",
-        "country": "United States",
-        "crossStreet": "at 19th St",
-        "postalCode": "20036",
-        "state": "D.C."
-      }
-    }
   ]
 };
