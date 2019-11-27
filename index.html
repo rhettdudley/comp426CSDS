@@ -5,6 +5,8 @@
         <title>Chapel Hill Bars</title>
         <link href = "project.css" rel = "stylesheet">
         <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='altstylesheet'/>
     </head>
 
 
@@ -45,12 +47,15 @@
                 </div>
             </div>
         </section>
-        <p> <span style="color: brown;">1. HTML input field, autocomplete suggestions are displayed. Must implement debouncing.</span> We should build a search bar to search our data of bars. This will be in the schedule of specials section, which outlines all the deals for every bar</p>
-        <p><span style="color: brown;"> 2. App must have a signup process and additional data </span> User specific data--you put in your favorite bar when you sign up. Then when you're logged in it gives you your favorite bar's specials of that day</p>
-        <p><span style="color: brown;"> 3. public private user data implementation </span>Public: like or don't like. Private: adding bars. User: favorite bar</p>
-        <p><span style="color: brown;"> 4. dyanmic backend </span> Compile bar data into a javascript file that our website renders. Steps: figure out API implementation, layering data on top of the API image, rendering that onto our screen</p>
-        <p><span style="color: brown;"> 5. build sidebar </span> Create a sidebar of the daily specials that feature bars and the hours and deals of that day's special</p>
-        <p>Rhett has a huge dong.</p>
-        <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-79.0571,35.9133,14.01,335/455x78?access_token=pk.eyJ1IjoicGhpbGlwZHNtYXJ0IiwiYSI6ImNqaGo1bWwxdzI4ZG4zMG03bG9tcnlrdmoifQ.Ky54IIgpxLDZ0COgJtmyTA" alt="Map" class = "center">
+        
+        <div class='app'>
+            <div class='sidebar pad2'>Listing</div>
+            <div id='map' class='map pad2'></div>
+        </div>
+
+        <!-- Include links to JavaScript files below -->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="data.js"></script>
+        <script src="project.js"></script>
     </body>
 </html>
