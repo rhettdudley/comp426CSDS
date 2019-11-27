@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
   // container id specified in the HTML
   container: 'map',
   // style URL2
-  style: 'mapbox://styles/smartmaps/ck3hj9a4603n01co3kgjz9olf',
+  style: 'mapbox://styles/mapbox/light-v10',
   // initial position in [lon, lat] format
   center: [-79.055780, 35.913142],
   // initial zoom
