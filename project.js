@@ -58,7 +58,6 @@ function buildLocationList(data) {
     } else {
       link.innerHTML = prop.address;
     }
-
     // Create a new div with the class 'details' for each store
     // and fill it with the city and phone number
     var details = listing.appendChild(document.createElement('div'));
@@ -66,6 +65,22 @@ function buildLocationList(data) {
     if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
+
+    // Add an event listener for the links in the sidebar listing 
+    link.addEventListener('click', function(e) {
+    // Update the currentFeature to the store associated with the clicked link
+      var clickedListing = data.features[this.dataPosition];
+      // 1. Fly to the point associated with the clicked link
+      flyToStore(clickedListing);
+      // 2. Close all other popups and display popup for clicked store
+      createPopUp(clickedListing);
+      // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+      var activeItem = document.getElementsByClassName('active');
+      if (activeItem[0]) {
+        activeItem[0].classList.remove('active');
+      }
+      this.parentNode.classList.add('active');
+    });
   }
 
   function flyToStore(currentFeature) {
@@ -95,22 +110,6 @@ function buildLocationList(data) {
       }
     };
   }
-
-  // Add an event listener for the links in the sidebar listing
-  link.addEventListener('click', function(e) {
-    // Update the currentFeature to the store associated with the clicked link
-    var clickedListing = data.features[this.dataPosition];
-    // 1. Fly to the point associated with the clicked link
-    flyToStore(clickedListing);
-    // 2. Close all other popups and display popup for clicked store
-    createPopUp(clickedListing);
-    // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-    var activeItem = document.getElementsByClassName('active');
-    if (activeItem[0]) {
-      activeItem[0].classList.remove('active');
-    }
-    this.parentNode.classList.add('active');
-  });
 
   map.on('click', function(e) {
     // Query all the rendered points in the view
