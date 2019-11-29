@@ -157,7 +157,8 @@ a:hover {
 
 /* Popup tweaks */
 .mapboxgl-popup-close-button {
-    display: none;
+    display: inline;
+    color: blue;
   }
   
   .mapboxgl-popup-content {
