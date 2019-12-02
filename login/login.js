@@ -10,35 +10,29 @@ $(function() {
     $home.on('click', () => {
         window.location.replace("http://localhost:3000/");
     })
-/*
-    $form.submit(function(e) {
 
-        $message.html('');
+    const $login = ('#login');
 
-        const name;
-        const password;
+    $login.on('click', () => {
 
-        const data = $form.serializeArray().reduce((o, x) => {
-            name = x.name;
-            password = x.value;
-            o[x.name] = x.value;
-            return o;
-        }, {});
+        let $username = $('#username');
+        let $password = $('#password');
 
-        $.ajax({
-            url: 'http://localhost:3000' + x.name,
-            type: 'POST',
-            data,
-            xhrFields: {
-                withCredentials: true,
-            },
-        }).then(() => {
-            $message.html('<span class="has-text-success">Success! You are now logged in.</span>');
-            //window.location.replace("http://localhost:3000");
-        }).catch(() => {
-            $message.html('<span class="has-text-danger">Something went wrong and you were not logged in. Check your email and password and your internet connection.</span>');
+        const r = await axios({
+            method: 'POST',
+            url: 'http://localhost:3000/account/login',
+            data: {
+                "name": $username.val(),
+                "pass": $password.val(),
+            }
         });
+
+        r.then(response => {
+            console.log(response.data);
+        }).catch(error => {
+            console.log(error);
+        });
+
     });
 
-*/
 });
