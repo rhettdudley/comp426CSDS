@@ -11,9 +11,9 @@ $(function() {
         window.location.replace("http://localhost:3000/");
     })
 
-    const $login = ('#login');
-
-    $login.on('click', () => {
+    const $login_button = $('#login_button');
+    
+    $login_button.on('click', async () => {
 
         let $username = $('#username');
         let $password = $('#password');
@@ -34,5 +34,7 @@ $(function() {
         });
 
     });
+
+
 
 });
