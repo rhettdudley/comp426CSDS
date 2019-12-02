@@ -1,0 +1,75 @@
+<html lang="en">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Schedule of Bar Specials</title>
+        <link href = "styles.css" rel = "stylesheet">
+        <link rel="stylesheet" href="bulma.css">
+    </head>
+
+    <body>
+        <section class="hero is-info is-centered">
+            <div class="hero-body">
+                <div class="container">
+                <h3 class="title is-1 is-centered">
+                    Schedule of Bar Specials
+                </h3>
+                <h2 class="subtitle is-4 is-italic is-centered">
+                    Select which day of the week you want to check for specials below. 
+                </h2>
+                </div>
+            </div>
+        </section>
+
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <!-- <div class="navbar-begin">
+                    <a id = "monday" class="navbar-item">
+                        Monday
+                    </a> -->
+                    <span class="navbar-item">
+                        <a class="button is-info is-inverted" id = "Monday">
+                        <span>Monday</span>
+                        </a>
+                        <a class="button is-info is-inverted" id = "Tuesday">
+                            <span>Tuesday</span>
+                            </a>
+                            <a class="button is-info is-inverted" id = "Wednesday">
+                                <span>Wednesday</span>
+                                </a>
+                                <a class="button is-info is-inverted" id = "Thursday">
+                                    <span>Thursday</span>
+                                    </a>
+                                    <a class="button is-info is-inverted" id = "Friday">
+                                        <span>Friday</span>
+                                        </a>
+                                        <a class="button is-info is-inverted" id = "Saturday">
+                                            <span>Saturday</span>
+                                            </a>
+                                            <a class="button is-info is-inverted" id = "Sunday">
+                                                <span>Sunday</span>
+                                                </a>
+                                                <a class="button is-info is-inverted" id = "All">
+                                                        <span>All Specials</span>
+                                                        </a>
+                            <form>
+                                <input class="input" id = "autoBox" placeholder="search for a specific bar!" rows="1" autocomplete="on"></input>
+                                <button class = "submit"> Submit</button>
+                            </form>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <div id='listings' class='listings'>
+                </div>
+
+               
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="data.js"></script>
+    <script src="schedule.js"></script>
+    <script src="node_modules/jquery.js"></script>
+    </body>
+    </html>

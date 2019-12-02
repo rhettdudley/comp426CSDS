@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chapel Hill Bars</title>
         <link href = "project.css" rel = "stylesheet">
-        <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
+        <link rel="stylesheet" href="bulma/css/bulma.css" />
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='altstylesheet'/>
     </head>
@@ -25,7 +25,7 @@
                             Login
                         </a>
                         <span class="navbar-item">
-                            <a class="button is-info is-inverted">
+                            <a class="button is-info is-inverted" id = "schedule">
                             <span>Schedule of Specials</span>
                             </a>
                         </span>
@@ -60,9 +60,10 @@
         </div>
 
         <!-- Include links to JavaScript files below -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="node_modules/jquery.js"></script>
         <script src="data.js"></script>
         <script src="project.js"></script>
-        <script src="script.js"></script>
+        <script src="schedule.js"></script>
     </body>
 </html>

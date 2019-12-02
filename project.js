@@ -1,5 +1,6 @@
 // add code here
 
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoic21hcnRtYXBzIiwiYSI6ImNqejMzOGZmZzAzNzczbnA3bTFkNzBkcDUifQ.UYY7_7PH78TwUJyiieGiDg';
 
 // This adds the map to page
@@ -140,3 +141,12 @@ function buildLocationList(data) {
   });
 
 }
+
+$(function() {
+    const $form = $('#schedule');
+    $form.click(function(e) {
+        e.preventDefault();
+        window.location.replace("http://localhost:3000/schedule");
+    })
+})
+
