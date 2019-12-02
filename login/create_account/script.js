@@ -1,10 +1,4 @@
 $(function() {
-
-    const $cancel = $('#cancel');
-    $cancel.on('click', () => {
-        window.location.replace("http://localhost:3001/login");
-    })
-
     const $submit = $('#submit');
     $submit.on('click', async () => {
 
@@ -27,13 +21,12 @@ $(function() {
                     'favbar': 'Bobs',
                 }
             }
-        });
-
-        r.then(response => {
+        }).then(response => {
             console.log(response.data);
         }).catch(error => {
             console.log(error);
         });
+
 
     });
     

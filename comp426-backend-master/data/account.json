@@ -7,6 +7,22 @@
         "lastname": "Account",
         "favbar": "Bobs"
       }
+    },
+    "test1": {
+      "passwordHash": "$2a$10$ZgmhwanovVscg2FsAG.maeQ/.t0B3BlXGjjJSEfvLntWlAz8fOFpW",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Bobs"
+      }
+    },
+    "willbenson97": {
+      "passwordHash": "$2a$10$dCRhROaDiN9YDVENHVBU1u3vSXOz0Mo7pDz27ciUjoEJ3ik9Sa7HS",
+      "data": {
+        "firstname": "Will",
+        "lastname": "Benson",
+        "favbar": "Bobs"
+      }
     }
   }
 }
