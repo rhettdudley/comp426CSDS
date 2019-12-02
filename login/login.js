@@ -4,11 +4,11 @@ $(function() {
 
     const $account = $('#create_account');
     $account.on('click', () => {
-        window.location.replace("http://localhost:3000/login/create_account");
+        window.location.replace("http://localhost:3001/login/create_account");
     })
     const $home = $('#back_home');
     $home.on('click', () => {
-        window.location.replace("http://localhost:3000/");
+        window.location.replace("http://localhost:3001/");
     })
 
     const $login_button = $('#login_button');

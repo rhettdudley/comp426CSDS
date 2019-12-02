@@ -1,0 +1,25 @@
+{
+  "name": "comp426csds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "bulma": "^0.8.0",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhettdudley/comp426CSDS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhettdudley/comp426CSDS/issues"
+  },
+  "homepage": "https://github.com/rhettdudley/comp426CSDS#readme"
+}

@@ -2,7 +2,7 @@ $(function() {
 
     const $cancel = $('#cancel');
     $cancel.on('click', () => {
-        window.location.replace("http://localhost:3000/login");
+        window.location.replace("http://localhost:3001/login");
     })
 
     const $submit = $('#submit');

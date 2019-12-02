@@ -1,2 +1,12 @@
 {
+  "users": {
+    "testaccount": {
+      "passwordHash": "$2a$10$uHWY5dY.40FonBVdbju.Q.sYI/nzzkQcpM0sJGd9G9Xa8gdWfkqpu",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Bobs"
+      }
+    }
+  }
 }
