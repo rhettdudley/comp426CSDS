@@ -68,12 +68,13 @@
   #login .login-card a {
     cursor: pointer;
     font-size: 1.0rem;
-    color: black;
+    color: white;
+    background-color: #4B9CD3;
     border-radius: 2rem;
     display: block;
     text-decoration: none;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid #4B9CD3;
     padding: 0.4rem 0 0.4rem;
     transition: color .5s, border-color .5s;
   }
@@ -128,12 +129,13 @@
   #login .login-card #back_home {
     cursor: pointer;
     font-size: 1.0rem;
-    color: black;
+    color: white;
     border-radius: 2rem;
     display: block;
     text-decoration: none;
+    background-color: #4B9CD3;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid #4B9CD3;
     padding: 0.4rem 0 0.4rem;
     transition: color .5s, border-color .5s;
   }

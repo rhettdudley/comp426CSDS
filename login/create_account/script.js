@@ -23,8 +23,11 @@ $(function() {
             }
         }).then(response => {
             console.log(response.data);
+            window.location.replace('../');
         }).catch(error => {
             console.log(error);
+            const msg = $('#message');
+            msg.html(error);
         });
 
 

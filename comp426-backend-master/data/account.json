@@ -23,6 +23,14 @@
         "lastname": "Benson",
         "favbar": "Bobs"
       }
+    },
+    "testaccount1": {
+      "passwordHash": "$2a$10$BYF2FqR.KzYetgHkFfCItuPPvNLVIZ9vsx.N4lvMv2lNKMzikLuqm",
+      "data": {
+        "firstname": "test",
+        "lastname": "account",
+        "favbar": "Bobs"
+      }
     }
   }
 }
