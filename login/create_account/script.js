@@ -1,13 +1,21 @@
 $(function() {
     const $submit = $('#submit');
+
+    for (var i = 0; i < stores.features.length; i++) {
+        var currentFeature = stores.features[i];
+        var name = currentFeature.properties.name;
+        var select = $('#select');
+        console.log(name);
+        select.append('<option value='+ name + '>' + name + '</option>');
+    } 
+
     $submit.on('click', async () => {
 
         let $first = $('#first');
         let $last = $('#last');
         let $username = $('#username');
         let $password = $('#password');
-
-        console.log($first.val());
+        var select = $('#select');
 
         const r = await axios({
             method: 'POST',
@@ -18,7 +26,7 @@ $(function() {
                 "data": {
                     "firstname": $first.val(),
                     'lastname': $last.val(),
-                    'favbar': 'Bobs',
+                    'favbar': select.val(),
                 }
             }
         }).then(response => {

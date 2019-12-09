@@ -1,6 +1,7 @@
 $(function() {
     const $form = $('#login-form');
     const $message = $('#message');
+    localStorage.removeItem('jwt');
 
     const $login_button = $('#login_button');
     
@@ -30,9 +31,8 @@ $(function() {
             }).catch(error => {
                 console.log(error);
             })
-            window.location.replace('../');
-            const jwt = $('#jwt');
-            jwt.html(response.data.jwt);
+            localStorage.setItem('jwt', response.data.jwt);
+            
             window.location.replace('../');
         }).catch(error => {
             console.log(error);

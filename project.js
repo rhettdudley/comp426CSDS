@@ -142,11 +142,31 @@ function buildLocationList(data) {
 
 }
 
-$(function() {
+$(async function() {
     const $form = $('#schedule');
     $form.click(function(e) {
         e.preventDefault();
         window.location.replace("http://localhost:3000/schedule");
+    })
+    const jwt = localStorage.getItem('jwt');
+
+    const g = await axios({
+        method: 'get',
+        url: 'http://localhost:3000/account/status',
+        headers: {
+            authorization: 'Bearer ' + jwt,
+        }
+    }).then( response => {
+        console.log(response.data.user.data);
+        var favbar = $('#favoritebar');
+        favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + response.data.user.data.favbar + '</h2>')
+        var login = $('#login');
+        var user = $('#user');
+        var loggedin = '<p class = "navbar-item" id = "loggedin">User: ' + response.data.user.data.firstname + ' ' + response.data.user.data.lastname + '</p>';
+        login.html('<a id = "login" class="navbar-item" href = "login/index.html">Logout</a>');
+        user.html(loggedin);
+    }).catch(error => {
+        console.log(error);
     })
 })
 

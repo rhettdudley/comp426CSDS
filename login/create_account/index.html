@@ -47,19 +47,27 @@
                 <input class="input" type="text" placeholder="Password" id = 'password'>
                 </div>
             </div>
-            
+            <label class="label">Favorite Chapel Hill Bar</label>
+            <div class="select is-multiple">
+                    <select id = "select">
+                      
+                    </select>
+            </div>
+            <br>
+            <br>
             <div class="field is-grouped">
                 <div class="control">
-                <button class="button is-link" id = 'submit'>Submit</button>
+                    <button class="button is-link" id = 'submit'>Submit</button>
                 </div>
                 <div class="control">
-                <a class="button is-link is-light" id = "cancel" href = "../">Cancel</a>
+                    <a class="button is-link is-light" id = "cancel" href = "../">Cancel</a>
                 </div>
             </div>
             <p id = 'message'></p>
         </div>
         <!-- Include links to JavaScript files below -->
         <script src='axios.js'></script>
+        <script src="../../data.js"></script>
         <script src="jquery.js"></script>
         <script type ='module' src="script.js"></script>
     </body>

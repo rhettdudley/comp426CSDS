@@ -31,6 +31,22 @@
         "lastname": "account",
         "favbar": "Bobs"
       }
+    },
+    "testaccount2": {
+      "passwordHash": "$2a$10$AqTfFOK0.VWRdIVUCRqV8.KlKhZ2KAlO9SdQ1bqUK8jOy6pvZQm2S",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "La"
+      }
+    },
+    "testaccount3": {
+      "passwordHash": "$2a$10$eQH/iQ6BDcz38LeGpGXBAOYhgxmNL31GqszPRMcLbKZT4r.wclfHW",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
     }
   }
 }
