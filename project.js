@@ -168,5 +168,18 @@ $(async function() {
     }).catch(error => {
         console.log(error);
     })
+    /*
+    const use = await axios({
+      method: 'get',
+      url: 'http://localhost:3000/user/favbar',
+      headers: {
+          authorization: 'Bearer ' + jwt,
+      }
+    }).then(respone => {
+      console.log(response);
+    }).catch(error =>{
+      console.log(error);
+    })
+    */
 })
 

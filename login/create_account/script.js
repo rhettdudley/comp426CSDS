@@ -1,11 +1,11 @@
-$(function() {
+$(async function() {
     const $submit = $('#submit');
-
+    console.log(localStorage.getItem('jwt'));
+    
     for (var i = 0; i < stores.features.length; i++) {
         var currentFeature = stores.features[i];
         var name = currentFeature.properties.name;
         var select = $('#select');
-        console.log(name);
         select.append('<option value='+ name + '>' + name + '</option>');
     } 
 
@@ -29,8 +29,8 @@ $(function() {
                     'favbar': select.val(),
                 }
             }
-        }).then(response => {
-            console.log(response.data);
+        }).then( async response => {
+            console.log(response);
             window.location.replace('../');
         }).catch(error => {
             console.log(error);
@@ -40,6 +40,6 @@ $(function() {
 
 
     });
-    
+
 
 });

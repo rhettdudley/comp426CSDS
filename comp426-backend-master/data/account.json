@@ -47,6 +47,82 @@
         "lastname": "Account",
         "favbar": "Pantana"
       }
+    },
+    "testaccount5": {
+      "passwordHash": "$2a$10$rlngO4YGNPodEikwK5OR6.Tq449VNrLx6qLGywld2i16O3jzRyzJS",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account"
+      }
+    },
+    "testaccount6": {
+      "passwordHash": "$2a$10$j6ObPpDkkyYX8pQUayKYheWolK9aoPr6ueh1y3u/a1wkMG75./CH.",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account"
+      }
+    },
+    "testaccount7": {
+      "passwordHash": "$2a$10$0vXoYGU6pMEU/75ev/hK9epjNEyMAKCh5tpW/0MchSB9hscRLd9X6",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account"
+      }
+    },
+    "testaccount8": {
+      "passwordHash": "$2a$10$XNzHThjz7yHIpEP.7pNehuFTJhV8z3hodrC9dIL0QR0W.pWCfJlWS",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account"
+      }
+    },
+    "testaccount9": {
+      "passwordHash": "$2a$10$4Ewqo6Kb/Kh6G2nxuE1m..JBBfcS.L.82Dy2nYxsCoCsdPYh/Nd8m",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
+    },
+    "testaccount10": {
+      "passwordHash": "$2a$10$rtPCx.Z8HsomNcKD9gXVPuiktg25BrGYMBrdm6W/dnf4sTf8f5eJm",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
+    },
+    "testaccount11": {
+      "passwordHash": "$2a$10$nFwgB.TebkC1XncKHGSVZeER4mMtBrOJQgosJvX3UJpdWoOCuaC2y",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
+    },
+    "testaccount12": {
+      "passwordHash": "$2a$10$Z.MI.rA2REwnuOaJUIvrJulNpbc3tJv2WiJJmlfppXenVkPMOeDRS",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
+    },
+    "testaccount13": {
+      "passwordHash": "$2a$10$r6/HT.RvMQWgVU0GY3fPWO123kwbzQfEKlK5rt7R2uA5V8qIh/6jq",
+      "data": {
+        "firstname": "Test",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
+    },
+    "testedaccount1": {
+      "passwordHash": "$2a$10$xzFJFH/VTir95oygyQfLGOiaztoj5jAXYv66EURdOE15SdtepntBe",
+      "data": {
+        "firstname": "Tested",
+        "lastname": "Account",
+        "favbar": "Pantana"
+      }
     }
   }
 }
