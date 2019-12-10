@@ -146,11 +146,11 @@ function buildLocationList(data) {
 }
 
 $(async function() {
-    const $form = $('#schedule');
-    $form.click(function(e) {
-        e.preventDefault();
-        window.location.replace("http://localhost:3000/schedule");
-    })
+    // const $form = $('#schedule');
+    // $form.click(function(e) {
+    //     e.preventDefault();
+    //     window.location.replace("http://localhost:3000/schedule");
+    // })
     const jwt = localStorage.getItem('jwt');
     //console.log(jwt);
     const g = await axios({
