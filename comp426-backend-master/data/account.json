@@ -147,6 +147,14 @@
         "lastname": "Account",
         "favbar": "Pantana"
       }
+    },
+    "testaccount30": {
+      "passwordHash": "$2a$10$9NxEHZpL4Mm9shQrRUGRoOgcPI4avWFnRbIzQNcFCSpTSVbKWXMPa",
+      "data": {
+        "firstname": "test",
+        "lastname": "account",
+        "favbar": "Goodfellows"
+      }
     }
   }
 }

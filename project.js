@@ -152,17 +152,18 @@ $(async function() {
         window.location.replace("http://localhost:3000/schedule");
     })
     const jwt = localStorage.getItem('jwt');
-    console.log(jwt);
+    //console.log(jwt);
     const g = await axios({
         method: 'get',
         url: 'http://localhost:3000/account/status',
         headers: {
             authorization: 'Bearer ' + jwt,
         }
-    }).then( response => {
-        console.log(response.data.user.data);
+    }).then(async response => {
+        //console.log(response.data.user.data);
         var favbar = $('#favoritebar');
         favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + response.data.user.data.favbar + '</h2>')
+        await postBar(response.data.user.data.favbar, localStorage.getItem('jwt'));
         var login = $('#login');
         var user = $('#user');
         var loggedin = '<p class = "navbar-item" id = "loggedin">User: ' + response.data.user.data.firstname + ' ' + response.data.user.data.lastname + '</p>';
@@ -171,18 +172,35 @@ $(async function() {
     }).catch(error => {
         console.log(error);
     })
-    /*
-    const use = await axios({
-      method: 'get',
-      url: 'http://localhost:3000/user/favbar',
-      headers: {
-          authorization: 'Bearer ' + jwt,
-      }
-    }).then(respone => {
-      console.log(response);
-    }).catch(error =>{
-      console.log(error);
-    })
-    */
 })
 
+/*
+async function checkStatus(jwt) {
+  const use = await axios({
+    method: 'get',
+    url: 'http://localhost:3000/account/status',
+    headers: {
+        authorization: 'Bearer ' + jwt,
+    }
+  }).then(response => {
+    console.log(response);
+  }).catch(error =>{
+    console.log(error);
+  })
+}
+*/
+
+/*
+async function postBar(bar, jwt) {
+  console.log(jwt);
+  console.log(bar);
+  axios
+  .post("http://localhost:3000/private/bars", {
+    data: bar},
+    {headers: { Authorization: `Bearer ` + jwt }
+  },)
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+  
+}
+*/

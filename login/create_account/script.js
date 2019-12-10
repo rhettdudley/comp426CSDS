@@ -36,7 +36,7 @@ $(async function() {
             let username = $('#username').val();
             let password = $('#password').val();
             await login(username, password);
-            await postUser()
+            await postBar(select.val(), localStorage.getItem('jwt'));
             console.log(response);
             window.location.replace('../../');
         }).catch(error => {
@@ -80,3 +80,15 @@ async function login(username, password) {
 }
 
 
+async function postBar(bar, jwt) {
+    console.log(jwt);
+    console.log(bar);
+    axios
+    .post("http://localhost:3000/user/favbar", {
+      data: bar},
+      {headers: { Authorization: `Bearer ` + jwt }
+    },)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+    
+  }
