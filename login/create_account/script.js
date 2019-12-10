@@ -1,3 +1,6 @@
+
+
+
 $(async function() {
     const $submit = $('#submit');
     console.log(localStorage.getItem('jwt'));
@@ -30,8 +33,12 @@ $(async function() {
                 }
             }
         }).then( async response => {
+            let username = $('#username').val();
+            let password = $('#password').val();
+            await login(username, password);
+            await postUser()
             console.log(response);
-            window.location.replace('../');
+            window.location.replace('../../');
         }).catch(error => {
             console.log(error);
             const msg = $('#message');
@@ -43,3 +50,33 @@ $(async function() {
 
 
 });
+
+
+async function login(username, password) {
+    const r = await axios({
+        method: 'POST',
+        url: 'http://localhost:3000/account/login',
+        data: {
+            "name": username,
+            "pass": password,
+        }
+    }).then( async response => {
+        const g = await axios({
+            method: 'get',
+            url: 'http://localhost:3000/account/status',
+            headers: {
+                authorization: 'Bearer ' + response.data.jwt,
+            }
+        }).then( response1 => {
+            localStorage.setItem('jwt', response.data.jwt);
+        }).catch(error => {
+            console.log(error);
+        })
+    }).catch(error => {
+        console.log(error);
+        const msg = $('#message');
+        msg.html(error);
+    });
+}
+
+

@@ -1,3 +1,5 @@
+//import { addBar } from "./public";
+
 // add code here
 
 
@@ -38,6 +40,7 @@ function buildLocationList(data) {
   // Iterate through the list of stores
   for (i = 0; i < data.features.length; i++) {
     var currentFeature = data.features[i];
+    //addBar(data.features[i]);
     // Shorten data.feature.properties to `prop` so we're not
     // writing this long form over and over again.
     var prop = currentFeature.properties;
@@ -149,7 +152,7 @@ $(async function() {
         window.location.replace("http://localhost:3000/schedule");
     })
     const jwt = localStorage.getItem('jwt');
-
+    console.log(jwt);
     const g = await axios({
         method: 'get',
         url: 'http://localhost:3000/account/status',

@@ -17,22 +17,20 @@ $(function() {
                 "name": $username.val(),
                 "pass": $password.val(),
             }
-        }).then( async response => {
-            console.log(response.data);
-            console.log(response.data.jwt);
+        }).then( async response1 => {
+            console.log(response1.data.jwt);
             const g = await axios({
                 method: 'get',
                 url: 'http://localhost:3000/account/status',
                 headers: {
-                    authorization: 'Bearer ' + response.data.jwt,
+                    authorization: 'Bearer ' + response1.data.jwt,
                 }
             }).then( response => {
+                localStorage.setItem('jwt', response1.data.jwt);
                 console.log(response.data.user.data);
             }).catch(error => {
                 console.log(error);
             })
-            localStorage.setItem('jwt', response.data.jwt);
-            
             window.location.replace('../');
         }).catch(error => {
             console.log(error);
