@@ -9,9 +9,11 @@ $(async function() {
         var currentFeature = stores.features[i];
         var name = currentFeature.properties.name;
         var select = $('#select');
-        select.append('<option value='+ name + '>' + name + '</option>');
+        console.log(name);
+        select.append('<option value='+ '"'+ name + '"' + '>' + name + '</option>');
     } 
-
+    var select = $('#select');
+    console.log(select.val());
     $submit.on('click', async () => {
 
         let $first = $('#first');
@@ -92,3 +94,4 @@ async function postBar(bar, jwt) {
     .catch(err => console.log(err));
     
   }
+

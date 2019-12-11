@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Create Account</title>
+
+        <link rel="stylesheet" href="bulma.css" />
+    </head>
+
+    <body>
+
+        <section class="hero is-info">
+                <div class="hero-body">
+                    <div class="container">
+                        <h3 class="title is-2">
+                            Update Your Favorite Bar Preference
+                        </h3>
+                    </div>
+                </div>
+        </section>
+
+        <br>
+        <div class="container is-fluid">
+
+            <label class="label">Favorite Chapel Hill Bar</label>
+            <div class="select is-multiple">
+                    <select id = "select">
+                      
+                    </select>
+            </div>
+            <br>
+            <br>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" id = 'submit'>Submit</button>
+                </div>
+                <div class="control">
+                    <a class="button is-link is-light" id = "cancel" href = "../">Cancel</a>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light" id = "remove">Remove Favorite Bar</button>
+                </div>
+            </div>
+            <p id = 'message'></p>
+        </div>
+        <!-- Include links to JavaScript files below -->
+        <script src='axios.js'></script>
+        <script src="../data.js"></script>
+        <script src="jquery.js"></script>
+        <script type ='module' src="script.js"></script>
+    </body>
+</html>

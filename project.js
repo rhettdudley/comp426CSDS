@@ -161,12 +161,12 @@ $(async function() {
         }
     }).then(async response => {
         //console.log(response.data.user.data);
-        var favbar = $('#favoritebar');
-        favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + response.data.user.data.favbar + '</h2>')
-        await postBar(response.data.user.data.favbar, localStorage.getItem('jwt'));
+        await getUserBar();
+        var banner = $('#banner');
+        banner.append('<a id = "Update" href = "update_bar/index.html">Update Favorite Bar</a>');
         var login = $('#login');
         var user = $('#user');
-        var loggedin = '<p class = "navbar-item" id = "loggedin">User: ' + response.data.user.data.firstname + ' ' + response.data.user.data.lastname + '</p>';
+        var loggedin = '<a class = "navbar-item" id = "loggedin">User: ' + response.data.user.data.firstname + ' ' + response.data.user.data.lastname + '</a>';
         login.html('<a id = "login" class="navbar-item" href = "login/index.html">Logout</a>');
         user.html(loggedin);
     }).catch(error => {
@@ -174,33 +174,22 @@ $(async function() {
     })
 })
 
-/*
-async function checkStatus(jwt) {
-  const use = await axios({
-    method: 'get',
-    url: 'http://localhost:3000/account/status',
-    headers: {
-        authorization: 'Bearer ' + jwt,
-    }
-  }).then(response => {
-    console.log(response);
-  }).catch(error =>{
-    console.log(error);
-  })
-}
-*/
 
-/*
-async function postBar(bar, jwt) {
-  console.log(jwt);
-  console.log(bar);
-  axios
-  .post("http://localhost:3000/private/bars", {
-    data: bar},
-    {headers: { Authorization: `Bearer ` + jwt }
-  },)
-  .then(res => console.log(res))
-  .catch(err => console.log(err));
-  
+async function getUserBar() {
+  const jwt = localStorage.getItem('jwt');
+    //console.log(jwt);
+    axios.get("http://localhost:3000/user/favbar",
+      {headers: { Authorization: `Bearer ` + jwt }
+    })
+    .then(res => {
+      console.log(res);
+      var favbar = $('#favoritebar');
+      favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
+      
+    })
+    .catch(err => console.log(err));
+    
 }
-*/
+
+ // <button id = "Update">Update Favorite Bar</button>
+  //<button id = "update"></button>

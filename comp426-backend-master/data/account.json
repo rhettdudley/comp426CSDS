@@ -163,6 +163,14 @@
         "lastname": "Benson",
         "favbar": "He's Not Here"
       }
+    },
+    "willbenson497": {
+      "passwordHash": "$2a$10$CXzLLVBftHEHN7Fz/Y84F.E38tK2zYj8xISKS85Antf4TwAYITstq",
+      "data": {
+        "firstname": "Will",
+        "lastname": "Benson",
+        "favbar": "Dead Mule Club"
+      }
     }
   }
 }

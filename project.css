@@ -51,6 +51,22 @@ h1 {
     padding: 20px 2px;
 }
 
+#Update {
+  cursor: pointer;
+  margin: auto;
+  font-size: 1.0rem;
+  color:black;
+  background-color: white;
+  border-radius: 2rem;
+  display: block;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid black;
+  padding: 0.4rem 0 0.4rem;
+  transition: color .5s, border-color .5s;
+}
+
 h2 {
     color: white;
     text-align: center;
