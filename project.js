@@ -93,7 +93,7 @@ async function buildLocationList(data) {
 
     // favDiv.innerHTML = await getLikeCount(i);
     // favDiv.innerHTML = 'Like Count: 0'
-    */ç
+    */
     // Add an event listener for the links in the sidebar listing 
     link.addEventListener('click', function(e) {
     // Update the currentFeature to the store associated with the clicked link
