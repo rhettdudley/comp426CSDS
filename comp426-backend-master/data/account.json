@@ -171,6 +171,14 @@
         "lastname": "Benson",
         "favbar": "Dead Mule Club"
       }
+    },
+    "rrd": {
+      "passwordHash": "$2a$10$ADhQZNAR7kKSh00g10jtPeTWLXC3YmLLG29N1DRmCwbl8pm9hh8F2",
+      "data": {
+        "firstname": "Rhett",
+        "lastname": "Dudley",
+        "favbar": "Pantana Bob's"
+      }
     }
   }
 }

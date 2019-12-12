@@ -205,9 +205,21 @@ $(async function() {
     }
 
     autocomplete(document.getElementById("autoBox"), barsAC);
-
-
-    await getPrivateSpecials();
+    const jwt = localStorage.getItem('jwt');
+    const g = await axios({
+      method:'get',
+      url:'http://localhost:3000/private',
+      headers: {
+        authorization: 'Bearer ' + jwt
+      }
+    }).then(async res => {
+      console.log(res.data);
+      // var favbar = $('#favoritebar');
+      // favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
+      
+    })
+    .catch(err => console.log(err));
+    //await getPrivateSpecials();
 })
 
 
@@ -494,6 +506,5 @@ async function getPrivateSpecials() {
       
     })
     .catch(err => console.log(err));
-   
 }
 
