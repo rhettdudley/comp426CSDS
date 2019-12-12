@@ -196,6 +196,9 @@ $(async function() {
         buildLocationDay("sunday", stores);
     })
 
+    $("#submit2").on('click', filterSpec);
+
+
 
     //const $autocomplete = $('#autoBox');
     var barsAC = [];
@@ -214,9 +217,6 @@ $(async function() {
     .then(async res => {
       console.log(res);
       var secret = $('#secretspecials');
-      for (i = 0; i < res.data; i++) {
-
-      }
       console.log(res.data.length)
       var html2 = '<h2 class="subtitle is-5 is-bold is-centered" id = "secretspecials">'+ 'User Secret Specials: ' + '<div>' + res.data.result + '</h2>';
       secret.html(html2);
@@ -225,6 +225,21 @@ $(async function() {
       
     })
     .catch(err => console.log(err));
+
+
+    axios.get("http://localhost:3000/public" 
+  )
+.then(async res => {
+  console.log(res);
+  var ours = $('#banner222');
+  console.log(res.data.length)
+  var html2 = '<h2 class="subtitle is-5 is-bold is-centered" id = "banner222">'+ 'Our Recommended Bar: ' + '<div>' + res.data.result + '</h2>';
+  ours.html(html2);
+  // var favbar = $('#favoritebar');
+  // favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
+  
+})
+.catch(err => console.log(err));
     //await getPrivateSpecials();
 })
 
@@ -574,6 +589,73 @@ async function sendPost(post) {
   return await pubRoot.post(`/feed/`, {
     data: {post}}
   );
+}
+
+//let Obj = {};
+function filterSpec() {
+ // listings = $('#listings');
+  //listings.empty;
+  let test = document.getElementById("autoBox").value;
+  document.getElementById("autoBox").value = "";
+  //let myBar = $('#form').serializeArray();
+  for (i = 0; i < stores.features.length; i++) {
+    var currentFeature = stores.features[i];
+    if (currentFeature.properties.name == test) {
+      $("#listings").empty();
+      var spec = currentFeature.specials;
+      // Select the listing container in the HTML and append a div
+      // with the class 'item' for each store
+      var listings = document.getElementById('listings');
+      var listing = listings.appendChild(document.createElement('div'));
+      listing.className = 'item';
+      listing.id = 'listing-' + i;
+
+      var link = listing.appendChild(document.createElement('a'));
+      link.href = '#';
+      link.className = 'title';
+      link.dataPosition = i;
+      if (currentFeature.properties.name) {
+        link.innerHTML = currentFeature.properties.name;
+      } else {
+        link.innerHTML = currentFeature.properties.address;
+      }
+        
+      // Create a new link with the class 'title' for each store
+      // and fill it with the store address
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.monday) {
+        details.innerHTML = "Monday: " + spec.monday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.tuesday) {
+        details.innerHTML = "Tuesday: " + spec.tuesday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.wednesday) {
+        details.innerHTML = "Wednesday: " + spec.wednesday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.thursday) {
+        details.innerHTML = "Thursday: " + spec.thursday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.friday) {
+        details.innerHTML = "Friday: " + spec.friday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.saturday) {
+        details.innerHTML = "Saturday: " + spec.saturday;
+      }
+      var details = listing.appendChild(document.createElement('div'));
+      if (spec.sunday) {
+        details.innerHTML = "Sunday: " + spec.sunday;
+      }
+
+
+    }
+  }
+  
+  //alert('reached');
 }
 
 
