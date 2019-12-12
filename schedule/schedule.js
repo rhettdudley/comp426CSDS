@@ -456,6 +456,7 @@ function autocomplete(inp, arr) {
       x[i].classList.remove("autocomplete-active");
     }
   }
+
   function closeAllLists(elmnt) {
     /*close all autocomplete lists in the document,
     except the one passed as an argument:*/
@@ -476,6 +477,32 @@ const myHandler = (e) => {
 
 }
 
+function renderSendForm() {
+  const postDiv = document.getElementById('post');
+  const postButton = document.getElementById('post-button');
+  $(postButton).replaceWith(renderSendSubmission());
+
+  $("#cancelButton").on('click', handleCancel);
+  $("#submitPost").on('click', handlePost);
+}
+
+function renderSendSubmission() {
+  var forms = `<form id = "postForm">
+        <textarea class="textarea is-info" name="textarea"
+            rows="5" cols="20"
+            minlength="1" maxlength="280">Let the people know</textarea>
+        <button id="submitPost" type="button" class="button is-info">Post to feed</button>
+        <button id="cancelButton" type="button" class="button is-info is-light">Cancel</button>
+        </form>`;
+    return forms;
+};
+/*
+function handleCancel() {
+  const postDiv = document.getElementById('post');
+  $("#post").empty();
+  postDiv.innerHTML = "<button class=\"button has-text-info\" onclick=\"renderSendForm()\" id=\"post-button\">Send to feed!</button>";
+}
+*/
 
 document.getElementById("autoBox").addEventListener("keydown", debounced(500, autocomplete));
 //const eHandler = $('#autobox')
@@ -508,38 +535,13 @@ async function getPrivateSpecials() {
     .catch(err => console.log(err));
 }
 
-const renderSendForm = function() {
-  const postDiv = document.getElementById('post');
-  const postButton = document.getElementById('post-button');
-  $(postButton).replaceWith(renderSendSubmission());
-
-  $("#cancelButton").on('click', handleCancel);
-  $("#submitPost").on('click', handlePost);
-}
-
-const renderSendSubmission = function() {
-  var forms = `<form id = "tweetForm">
-        <textarea class="textarea is-info" name="textarea"
-            rows="5" cols="20"
-            minlength="1" maxlength="280">Let the people know</textarea>
-        <button id="submitPost" type="button" class="button is-info">Post to feed</button>
-        <button id="cancelButton" type="button" class="button is-info is-light">Cancel</button>
-        </form>`;
-    return forms;
-};
-
-const handleCancel = function() {
-  const postDiv = document.getElementById('post');
-  $("#post").empty();
-  postDiv.innerHTML = "<button class=\"button has-text-info\" onclick=\"renderSendForm()\" id=\"post-button\">Send to feed!</button>";
-}
 
 let Obj = {};
 async function handlePost() {
   const postDiv = document.getElementById('post');
   let myForm;
   let myPost;
-  myForm = $("#tweetForm").serializeArray();
+  myForm = $("#posttForm").serializeArray();
 
   $(myForm).each(function(i, field){
       Obj[field.name] = field.value;
@@ -554,6 +556,13 @@ async function handlePost() {
 const pubRoot = new axios.create({
   baseURL: "http://localhost:3000/public"
 });
+
+
+const handleCancel = function() {
+  const postDiv = document.getElementById('post');
+  $("#post").empty();
+  postDiv.innerHTML = "<button class=\"button has-text-info\" onclick=\"renderSendForm()\" id=\"post-button\">Send to feed!</button>";
+}
 
 async function sendPost(post) {
   return await pubRoot.post(`/feed/`, {
