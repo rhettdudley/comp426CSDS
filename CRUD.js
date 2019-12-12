@@ -17,7 +17,16 @@ async function getUserBar() {
       })
       .catch(err => console.log(err));
       
-  }
+}
+
+async function getLikeCount(id) {
+  axios.get("http://localhost:3000/public")
+  .then(res => {
+    console.log(res);
+    var favbar = $('#barID' + id);
+  })
+  .catch(err => console.log(err));
+}
 
 
   //Create
@@ -47,8 +56,7 @@ async function getUserBar() {
     },)
     .then(res => console.log(res))
     .catch(err => console.log(err));
-    
-}
+  }
 
 //Destroy
 

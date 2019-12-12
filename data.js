@@ -1,4 +1,4 @@
-// were going to make these into bars. They're currently the SweetGreen stores in DC
+// were going to make these into bars. 
 
 const stores = {
   "type": "FeatureCollection",

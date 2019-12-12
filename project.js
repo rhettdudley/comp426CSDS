@@ -36,7 +36,7 @@ map.on('load', function(e) {
   buildLocationList(stores);
 });
 
-function buildLocationList(data) {
+async function buildLocationList(data) {
   // Iterate through the list of stores
   for (i = 0; i < data.features.length; i++) {
     var currentFeature = data.features[i];
@@ -69,6 +69,20 @@ function buildLocationList(data) {
     if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
+
+    var favDiv = listing.appendChild(document.createElement('div'));
+    favDiv.display = 'inline-block';
+    var favoriteIcon = favDiv.appendChild(document.createElement('a'));
+    favoriteIcon.href = '#buttonLink';
+    favoriteIcon.className = 'title';
+    favoriteIcon.dataPosition = i;
+    favoriteIcon.innerHTML = '<i class="fas fa-arrow-circle-up"></i>';
+    favoriteIcon.className = 'icon has-text-info';
+    var favCount = favDiv.appendChild(document.createElement('span'));
+    favCount.dataPosition = i;
+    favCount.id = 'barID' + i;
+    await getLikeCount(i);
+    // favDiv.innerHTML = 'Like Count: 0'
 
     // Add an event listener for the links in the sidebar listing 
     link.addEventListener('click', function(e) {
@@ -188,7 +202,15 @@ async function getUserBar() {
       
     })
     .catch(err => console.log(err));
-    
+}
+
+async function getLikeCount(id) {
+    axios.get("http://localhost:3000/public")
+    .then(res => {
+      console.log(res);
+      var favbar = $('#barID' + id);
+    })
+    .catch(err => console.log(err));
 }
 
  // <button id = "Update">Update Favorite Bar</button>

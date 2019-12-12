@@ -1,2 +1,44 @@
 {
+    "bars": {
+        "Pantana Bob's": {
+            "LikeCount": 2,
+            "id": 0
+        },
+        "La Residencia": {
+            "LikeCount": 0,
+            "id": 1
+        },
+        "The Franklin": {
+            "LikeCount": 0,
+            "id": 2
+        },
+        "Top of the Hill": {
+            "LikeCount": 0,
+            "id": 3
+        },
+        "He's Not Here": {
+            "LikeCount": 0,
+            "id": 4
+        },
+        "Might As Well Bar & Grill": {
+            "LikeCount": 0,
+            "id": 5
+        },
+        "Dead Mule Club": {
+            "LikeCount": 0,
+            "id": 6 
+        },
+        "Carolina Brewery": {
+            "LikeCount": 0,
+            "id": 7
+        },
+        "Linda's Bar & Grill": {
+            "LikeCount": 0,
+            "id": 8
+        },
+        "Goodfellows": {
+            "LikeCount": 0,
+            "id": 9
+        }
+    }
 }
