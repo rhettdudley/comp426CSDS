@@ -233,7 +233,7 @@ $(async function() {
   console.log(res);
   var ours = $('#banner222');
   console.log(res.data.length)
-  var html2 = '<h2 class="subtitle is-5 is-bold is-centered" id = "banner222">'+ 'Our Recommended Bar: ' + '<div>' + res.data.result + '</h2>';
+  var html2 = '<h2 class="subtitle is-5 is-bold is-centered" id = "banner222">'+ 'Our Recommended Bar: ' + '<div>' + res.data.result + '<div>' + 'Create a User Account to see Exclusive Specials!' + '</h2>';
   ours.html(html2);
   // var favbar = $('#favoritebar');
   // favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');

@@ -213,5 +213,26 @@ const stores = {
           "state": "NC"
         }
       },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.0531,
+            35.9152
+          ]
+        },
+        "properties": {
+          "name": "Tru Deli",
+          "phoneFormatted": "(919) 240-7755",
+          "phone": "9192407755",
+          "address": "114 Henderson Street",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "N/A",
+          "postalCode": "27514",
+          "state": "NC"
+        },
+      },
   ]
 };

@@ -2,6 +2,16 @@
    text-align: center; 
 }
 
+.secretspecials {
+  text-align: center;
+  border: 2px solid #000000;
+  font-weight: bold;
+}
+
+.banner222 {
+  text-align: center;
+}
+
 .backToHome {
    text-align: center;
 }

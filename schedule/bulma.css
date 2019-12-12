@@ -4240,6 +4240,8 @@
   
   .subtitle.is-5 {
     font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
   }
   
   .subtitle.is-6 {

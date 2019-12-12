@@ -179,6 +179,14 @@
         "lastname": "Dudley",
         "favbar": "Pantana Bob's"
       }
+    },
+    "ptrams": {
+      "passwordHash": "$2a$10$5olbEXg4C.Qb/7Ls2o3eS.PlH9IscFDPMMmrXeVWqdyubO7lb.0.a",
+      "data": {
+        "firstname": "Phil",
+        "lastname": "Smart",
+        "favbar": "Might As Well Bar & Grill"
+      }
     }
   }
 }

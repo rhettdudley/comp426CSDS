@@ -87,7 +87,7 @@ const stores = {
           "monday": "",
           "tuesday": "",
           "wednesday": "",
-          "thursday": "",
+          "thursday": "$10 Extra Credit Cocktails during Happy Hour 5-7pm",
           "friday": "",
           "saturday": "",
           "sunday": "",
@@ -116,11 +116,11 @@ const stores = {
         "specials": {
           "monday": "Half Off Wine Bottles",
           "tuesday": "$3 Shooters",
-          "wednesday": "",
+          "wednesday": "$5 Mules",
           "thursday": "$3 Wheat Beers & $5 Kansas City Ice Waters",
-          "friday": "",
+          "friday": "$4.50 Season Ales",
           "saturday": "",
-          "sunday": "",
+          "sunday": "$3 Pints, $4 Mimosas, $5 Kansas City Ice Waters",
         }
       },
       {
@@ -174,13 +174,13 @@ const stores = {
           "state": "NC"
         },
         "specials": {
-          "monday": "",
-          "tuesday": "",
-          "wednesday": "",
-          "thursday": "",
-          "friday": "",
+          "monday": "$2.50 Margaritas, $2.25 Bud Draft, $5 Baby Guinness",
+          "tuesday": "$1 Vodka, Rum. $3 Kamakazi. $4 Malibu Rum and Bacardi College Night",
+          "wednesday": "$5 off bottles of wine",
+          "thursday": "$4 Fireball Shots. STEAK NIGHT $9.99 New York Strips ",
+          "friday": "$4 Cinnamon Toast Crunch Shots",
           "saturday": "",
-          "sunday": "",
+          "sunday": "1/2 price bottles of wine",
         }
       },
       {
@@ -235,12 +235,12 @@ const stores = {
         },
         "specials": {
           "monday": "",
-          "tuesday": "",
+          "tuesday": "$3 Pints",
           "wednesday": "",
-          "thursday": "",
+          "thursday": "$3 Wine, $5 Speciality Cocktails",
           "friday": "",
-          "saturday": "",
-          "sunday": "",
+          "saturday": "$1 Mimosas, $3 Bloody Mary",
+          "sunday": "$1 Mimosas",
         }
       },
       {
@@ -267,10 +267,10 @@ const stores = {
           "monday": "$3 Well Drinks ",
           "tuesday": "",
           "wednesday": "$3.50 Well Drinks",
-          "thursday": "",
+          "thursday": "1/2 Off Wine Bottles",
           "friday": "",
           "saturday": "$4 Mystic, Pickleback or Fireball Shots",
-          "sunday": "",
+          "sunday": "$1 Off Cocktails",
         }
       },
       {
@@ -297,15 +297,43 @@ const stores = {
           "monday": "",
           "tuesday": "$3.50 Long Island Iced Teas & $2.50 Shooters",
           "wednesday": "",
-          "thursday": "",
+          "thursday": "$2 Ball Shooters, $3 Well Drinks",
           "friday": "",
           "saturday": "",
           "sunday": "Half off drinks",
         }
       },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.055470,
+            35.91026
+          ]
+        },
+        "properties": {
+          "name": "Tru Deli",
+          "phoneFormatted": "(919) 240-7755",
+          "phone": "9192407755",
+          "address": "114 Henderson Street",
+          "city": "Chapel Hill",
+          "country": "United States",
+          "crossStreet": "N/A",
+          "postalCode": "27514",
+          "state": "NC"
+        },
+        "specials": {
+          "monday": "$4 pints",
+          "tuesday": "$3 wells",
+          "wednesday": "$4 margaritas",
+          "thursday": "$5 house cocktails",
+          "friday": "$4 off bottles of wine",
+          "saturday": "$2 off pints",
+          "sunday": "$2 off glasses of wine",
+        }
+      },
   ]
 };
-// maybe add sup dogs and Tru?
-// Sup Dogs: monday pint night $3, sunday $2.50 beer bottles
-// Tru: Tuesday $3 wells , Wednesday $4 Margs , Fridays $4 off bottles of wine 
+
 

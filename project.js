@@ -51,6 +51,7 @@ async function buildLocationList(data) {
     listing.className = 'item';
     listing.id = 'listing-' + i;
 
+    
     // Create a new link with the class 'title' for each store
     // and fill it with the store address
     var link = listing.appendChild(document.createElement('a'));
@@ -64,8 +65,13 @@ async function buildLocationList(data) {
     }
     // Create a new div with the class 'details' for each store
     // and fill it with the city and phone number
+    var details1 = listing.appendChild(document.createElement('div'));
+    if (prop.name == favebar) {
+     details1.innerHTML += '<p>&#9733 YOUR FAVE! &#9733;</p>';
+    };
     var details = listing.appendChild(document.createElement('div'));
     details.innerHTML = prop.address;
+    
     if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
@@ -167,7 +173,7 @@ async function buildLocationList(data) {
     }
   });
 
-}
+} 
 
 $(async function() {
     // const $form = $('#schedule');
@@ -198,7 +204,7 @@ $(async function() {
     })
 })
 
-
+let favebar = "";
 async function getUserBar() {
   const jwt = localStorage.getItem('jwt');
     //console.log(jwt);
@@ -208,8 +214,8 @@ async function getUserBar() {
     .then(res => {
       console.log(res);
       var favbar = $('#favoritebar');
-      favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
-      
+   //   favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
+      favebar = res.data.result;
     })
     .catch(err => console.log(err));
 }
