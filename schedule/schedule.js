@@ -208,14 +208,11 @@ $(async function() {
 
     
     const jwt = localStorage.getItem('jwt');
-    const g = await axios({
-      method:'get',
-      url:'http://localhost:3000/private',
-      headers: {
-        authorization: 'Bearer ' + jwt
-      }
-    }).then(async res => {
-      console.log(res.data);
+    axios.get("http://localhost:3000/private",
+        {headers: { Authorization: `Bearer ` + jwt }
+      })
+    .then(async res => {
+      console.log(res);
       var secret = $('#secretspecials');
       for (i = 0; i < res.data; i++) {
 
