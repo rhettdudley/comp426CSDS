@@ -205,6 +205,8 @@ $(async function() {
     }
 
     autocomplete(document.getElementById("autoBox"), barsAC);
+
+    
     const jwt = localStorage.getItem('jwt');
     const g = await axios({
       method:'get',
@@ -214,6 +216,13 @@ $(async function() {
       }
     }).then(async res => {
       console.log(res.data);
+      var secret = $('#secretspecials');
+      for (i = 0; i < res.data; i++) {
+
+      }
+      console.log(res.data.length)
+      var html2 = '<h2 class="subtitle is-5 is-bold is-centered" id = "secretspecials">'+ 'User Secret Specials: ' + '<div>' + res.data.result + '</h2>';
+      secret.html(html2);
       // var favbar = $('#favoritebar');
       // favbar.html('<h2 class="subtitle is-5" id = "favoritebar">'+ 'Your favorite bar is: ' + res.data.result + '</h2>');
       

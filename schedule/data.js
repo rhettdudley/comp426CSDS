@@ -13,7 +13,7 @@ const stores = {
         ]
       },
       "properties": {
-        "name" : "Pantana Bob's",
+        "name" : "Pantana Bobs",
         "phoneFormatted": "(919) 942-7575",
         "phone": "9199427575",
         "address": "305 W Rosemary St",
@@ -133,7 +133,7 @@ const stores = {
           ]
         },
         "properties": {
-          "name": "He's Not Here",
+          "name": "Hes Not Here",
           "phoneFormatted": "(919) 942-7939",
           "phone": "9199427939",
           "address": "112 1/2 W Franklin St,",
@@ -253,7 +253,7 @@ const stores = {
           ]
         },
         "properties": {
-          "name": "Linda's Bar & Grill",
+          "name": "Lindas Bar & Grill",
           "phoneFormatted": "(919) 933-6663",
           "phone": "9199336663",
           "address": "203 E Franklin St",
