@@ -508,3 +508,77 @@ async function getPrivateSpecials() {
     .catch(err => console.log(err));
 }
 
+const renderSendForm = function() {
+  const postDiv = document.getElementById('post');
+  const postButton = document.getElementById('post-button');
+  $(postButton).replaceWith(renderSendSubmission());
+
+  $("#cancelButton").on('click', handleCancel);
+  $("#submitPost").on('click', handlePost);
+}
+
+const renderSendSubmission = function() {
+  var forms = `<form id = "tweetForm">
+        <textarea class="textarea is-info" name="textarea"
+            rows="5" cols="20"
+            minlength="1" maxlength="280">Let the people know</textarea>
+        <button id="submitPost" type="button" class="button is-info">Post to feed</button>
+        <button id="cancelButton" type="button" class="button is-info is-light">Cancel</button>
+        </form>`;
+    return forms;
+};
+
+const handleCancel = function() {
+  const postDiv = document.getElementById('post');
+  $("#post").empty();
+  postDiv.innerHTML = "<button class=\"button has-text-info\" onclick=\"renderSendForm()\" id=\"post-button\">Send to feed!</button>";
+}
+
+let Obj = {};
+async function handlePost() {
+  const postDiv = document.getElementById('post');
+  let myForm;
+  let myPost;
+  myForm = $("#tweetForm").serializeArray();
+
+  $(myForm).each(function(i, field){
+      Obj[field.name] = field.value;
+  });
+
+  myPost = Obj['textarea'];
+  await sendPost(myPost);
+  $(postDiv).empty();
+  postDiv.innerHTML = "<button class=\"button has-text-info\" onclick=\"renderSendForm()\" id=\"post-button\">Send to feed!</button>";
+}
+
+const pubRoot = new axios.create({
+  baseURL: "http://localhost:3000/public"
+});
+
+async function sendPost(post) {
+  return await pubRoot.post(`/feed/`, {
+    data: {post}}
+  );
+}
+
+
+  /*
+  console.log(post);
+  const result = await axios({
+      method: 'post',
+      url: 'http://localhost:3000/public',
+      withCredentials: true,
+      data: {
+        body: post
+      },
+  });
+  console.log(result);
+  return result;*/
+
+
+
+
+
+
+
+

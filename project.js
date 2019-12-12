@@ -69,11 +69,11 @@ async function buildLocationList(data) {
     if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
-
+    /*
     var favDiv = listing.appendChild(document.createElement('div'));
     favDiv.display = 'inline-block';
     var favoriteIcon = favDiv.appendChild(document.createElement('a'));
-    favoriteIcon.href = '#buttonLink';
+    favoriteIcon.href = '#buttonLink' + i;
     favoriteIcon.className = 'title';
     favoriteIcon.dataPosition = i;
     favoriteIcon.innerHTML = '<i class="fas fa-arrow-circle-up"></i>';
@@ -82,8 +82,18 @@ async function buildLocationList(data) {
     favCount.dataPosition = i;
     favCount.id = 'barID' + i;
     await getLikeCount(i);
-    // favDiv.innerHTML = 'Like Count: 0'
 
+    favoriteIcon.addEventListener('click', async function(e) {
+      var clickedButton = data.features[this.dataPosition];
+      var i = this.dataPosition;
+      await increaseLikeCount(i);
+      await getLikeCount(i);
+
+    });
+
+    // favDiv.innerHTML = await getLikeCount(i);
+    // favDiv.innerHTML = 'Like Count: 0'
+    */
     // Add an event listener for the links in the sidebar listing 
     link.addEventListener('click', function(e) {
     // Update the currentFeature to the store associated with the clicked link
@@ -205,12 +215,39 @@ async function getUserBar() {
 }
 
 async function getLikeCount(id) {
-    axios.get("http://localhost:3000/public")
-    .then(res => {
-      console.log(res);
-      var favbar = $('#barID' + id);
+    axios.get("http://localhost:3000/public/bars")
+    .then(async res => {
+      var thisBar = document.getElementById('barID' + id);
+      thisBar.innerHTML = res.data.result[id].LikeCount;
     })
     .catch(err => console.log(err));
+}
+
+async function increaseLikeCount(id) {
+  var goodURL = 'http://localhost:3000/public/bars/' + id;
+
+  var currentLikeCount = 100;
+  var test = await axios.get("http://localhost:3000/public/bars")
+    .then(async res => {
+    var thisBar = document.getElementById('barID' + id);
+    currentLikeCount = res.data.result[id].LikeCount;
+    res.data.result[id].LikeCount = 101;
+    })
+    .catch(err => console.log(err));
+
+  
+  /*
+  console.log(currentLikeCount);
+  newLikeCount = currentLikeCount + 1;
+  const result = await axios({
+    method: 'post',
+    url: goodURL,
+    // withCredentials: true,
+    data: {
+      LikeCount: newLikeCount
+    },
+  });
+  */
 }
 
  // <button id = "Update">Update Favorite Bar</button>
