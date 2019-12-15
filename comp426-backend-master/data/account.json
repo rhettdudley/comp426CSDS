@@ -187,6 +187,14 @@
         "lastname": "Smart",
         "favbar": "Might As Well Bar & Grill"
       }
+    },
+    "willbenson974": {
+      "passwordHash": "$2a$10$S9bjL8AfgI6AnoUVWHVc5.05USo6.tJmyFoM0kvLabc2atMHk8.ku",
+      "data": {
+        "firstname": "Will",
+        "lastname": "Benson",
+        "favbar": "Goodfellows"
+      }
     }
   }
 }
